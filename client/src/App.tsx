@@ -13,7 +13,6 @@ const App = () => {
         console.error(error);
       }
     })();
-    console.log('Mounted again');
   }, []);
 
   return <div>Hello world</div>;
