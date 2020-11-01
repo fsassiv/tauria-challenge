@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/header/Header';
+import ReturnButton from './../../components/ReturnButton/ReturnButton';
 import { PageProps } from './Pages.types';
 
 const Page = (props: PageProps) => {
@@ -7,7 +8,10 @@ const Page = (props: PageProps) => {
   return (
     <>
       {withHeader && <Header />}
-      <div className="container page">{children}</div>
+      <div className="container page">
+        {children}
+        <ReturnButton />
+      </div>
     </>
   );
 };

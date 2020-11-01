@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
+import sizesRoute from './routes/sizes';
 import toppingsRoute from './routes/toppings';
 
 const PORT = process.env.PORT || 3000;
@@ -18,6 +19,7 @@ app.get('/', (_req: Request, res: Response) => {
 });
 
 app.use('/api/toppings', toppingsRoute);
+app.use('/api/sizes', sizesRoute);
 
 app.listen(PORT, () => {
   console.log(`Server is running on PORT ${PORT}. API endpoint http://localhost:3000`);
