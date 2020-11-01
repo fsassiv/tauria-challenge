@@ -1,11 +1,7 @@
 import { Request, Response, Router } from 'express';
+import { Topping } from './types';
 
 const router = Router();
-
-interface Topping {
-  label: string;
-  imgUrl: string;
-}
 
 const toppings: Topping[] = [
   { label: 'Pepperoni', imgUrl: '' },

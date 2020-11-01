@@ -4,6 +4,9 @@
   "description": "Basic setup for Node, Express and Typescript projects",
   "main": "index.js",
   "scripts": {
+    "install:server": "npm i",
+    "install:client": "cd client && npm i",
+    "install": "npm run install:*",
     "start:server": "nodemon --exec ts-node index.ts",
     "start:client": "npm start --prefix client",
     "start": "concurrently \"npm run start:*\" ",

@@ -17,10 +17,6 @@ app.get('/', (_req: Request, res: Response) => {
   res.render(path.resolve(__dirname, 'client', 'dist', 'index.html'));
 });
 
-app.get('/api', (_req: Request, res: Response) => {
-  res.send({ data: ['ok'] });
-});
-
 app.use('/api/toppings', toppingsRoute);
 
 app.listen(PORT, () => {
