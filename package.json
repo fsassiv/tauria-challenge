@@ -1,8 +1,8 @@
 {
   "name": "tauria-challenge",
   "version": "1.0.0",
-  "description": "Basic setup for Node, Express and Typescript projects",
-  "main": "index.js",
+  "description": "Code challenge",
+  "main": "index.ts",
   "scripts": {
     "install:server": "npm i",
     "install:client": "cd client && npm i",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/fsassiv/tauria-challenge.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Flávio Andrade",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fsassiv/tauria-challenge/issues"
