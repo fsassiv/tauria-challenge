@@ -14,10 +14,10 @@ const App = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/size" exact component={Size} />
-        <Route path="/crust" exact component={Crust} />
-        <Route path="/toppings" exact component={Toppings} />
-        <Route path="/confirmation" exact component={Confirmation} />
+        <Route path="/size" component={Size} />
+        <Route path="/crust" component={Crust} />
+        <Route path="/toppings" component={Toppings} />
+        <Route path="/confirmation" component={Confirmation} />
         <Route path="*" component={NotFound} />
       </Switch>
     </Suspense>
