@@ -1,6 +1,7 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
+import axios from './services/api';
 
 const Home = lazy(() => import('./pages/Home'));
 const NotFound = lazy(() => import('./pages/404'));
@@ -10,6 +11,13 @@ const Toppings = lazy(() => import('./pages/Toppings'));
 const Confirmation = lazy(() => import('./pages/OrderConfirmation'));
 
 const App = () => {
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios.get('/toppings');
+      console.log(data);
+    })();
+  }, []);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>

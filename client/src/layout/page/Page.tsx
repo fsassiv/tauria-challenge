@@ -11,9 +11,11 @@ const Page = (props: PageProps) => {
   return (
     <>
       {withHeader && <Header />}
-      <div className="container page">
-        {children}
-        {location.pathname !== '/' && <ReturnButton />}
+      <div className="page">
+        <div className="container">
+          {children}
+          {location.pathname !== '/' && <ReturnButton />}
+        </div>
       </div>
     </>
   );
