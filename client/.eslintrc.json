@@ -19,5 +19,16 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@layout", "./src/layout"]
+        ],
+        "extensions": [".ts", ".tsx", ".scss"]
+      }
+    }
   }
 }
