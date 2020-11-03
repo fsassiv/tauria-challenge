@@ -5,6 +5,7 @@ const DEFAULT_VALUE = {
   toppingsList: [],
   updateToppingsList: () => {},
   clearToppingsList: () => {},
+  removeTopping: (topping: ToppingTypes) => {},
 };
 
 export const ToppingsContext = createContext<ToppingsContextTypes>(DEFAULT_VALUE);
@@ -22,14 +23,18 @@ const ToppingsContextComponent = (props: ToppingsContextComponentTypes) => {
     }
 
     if (toppingFound) {
-      let updatedToppingsList: ToppingTypes[] = toppingsList.filter((item) => item.id !== topping.id);
-      setToppingsList(updatedToppingsList);
+      removeTopping(topping);
     }
   };
 
   const clearToppingsList = () => setToppingsList([]);
 
-  return <ToppingsContext.Provider value={{ toppingsList, updateToppingsList, clearToppingsList }}>{children}</ToppingsContext.Provider>;
+  const removeTopping = (topping: ToppingTypes) => {
+    let updatedToppingsList: ToppingTypes[] = toppingsList.filter((item) => item.id !== topping.id);
+    setToppingsList(updatedToppingsList);
+  };
+
+  return <ToppingsContext.Provider value={{ toppingsList, updateToppingsList, clearToppingsList, removeTopping }}>{children}</ToppingsContext.Provider>;
 };
 
 export default ToppingsContextComponent;

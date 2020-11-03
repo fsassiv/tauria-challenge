@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ReturnButton from './../../components/ReturnButton/ReturnButton';
 import { PageProps } from './types';
 
@@ -7,12 +7,19 @@ const Page = (props: PageProps) => {
   const { children } = props;
   const { location } = useHistory();
 
+  console.log(location);
+
   return (
     <>
       <div className="page">
         <div className="container">
           {children}
           {location.pathname !== '/' && <ReturnButton />}
+          {location.pathname === '/toppings' && (
+            <Link to="/confirmation" className="button button-primary page__next-btn">
+              Finish order
+            </Link>
+          )}
         </div>
       </div>
     </>

@@ -8,4 +8,10 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__next-btn {
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+  }
 }

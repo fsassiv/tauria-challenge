@@ -2,7 +2,7 @@
 
 ### Technologies
 
-Node, Express, React and Typescript
+Node, Express, React, Typescript and Sass
 
 ### Instructions
 

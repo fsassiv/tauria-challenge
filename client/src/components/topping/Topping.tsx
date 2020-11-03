@@ -6,12 +6,14 @@ import { ToppingProps, ToppingTypes } from './types';
 const Topping = (prop: ToppingProps) => {
   const [checked, setChecked] = useState(false);
   const { topping } = prop;
-  const { updateToppingsList, toppingsList } = useContext(ToppingsContext);
+  const { updateToppingsList, toppingsList, removeTopping } = useContext(ToppingsContext);
   const { size } = useContext(SizeContext);
 
   const handleChange = (topping: ToppingTypes) => {
     if (size && toppingsList.length < size.maxIngredients) {
       updateToppingsList(topping);
+    } else {
+      removeTopping(topping);
     }
   };
 
