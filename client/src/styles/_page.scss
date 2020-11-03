@@ -15,12 +15,11 @@
 
   &__next-btn {
     position: absolute;
-    right: 0;
-    bottom: -60px;
+    right: 15%;
   }
 
   &__table-wrapper {
-    max-height: '300px';
-    overflow-y: 'scroll';
+    max-height: 300px;
+    overflow-y: scroll;
   }
 }
