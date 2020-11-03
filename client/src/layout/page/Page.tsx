@@ -7,8 +7,6 @@ const Page = (props: PageProps) => {
   const { children } = props;
   const { location } = useHistory();
 
-  console.log(location);
-
   return (
     <>
       <div className="page">
