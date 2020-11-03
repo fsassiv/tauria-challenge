@@ -1,6 +1,6 @@
 import { ToppingsContext } from '@context/toppings';
 import React, { useContext, useEffect, useState } from 'react';
-import { ToppingProps } from './types';
+import { ToppingProps, ToppingTypes } from './types';
 
 const Topping = (prop: ToppingProps) => {
   const [checked, setChecked] = useState(false);
@@ -8,7 +8,7 @@ const Topping = (prop: ToppingProps) => {
   const { updateToppingsList, toppingsList } = useContext(ToppingsContext);
 
   useEffect(() => {
-    if (toppingsList.filter((item) => item.id === topping.id).length > 0) {
+    if (toppingsList.filter((item: ToppingTypes) => item.id === topping.id).length > 0) {
       setChecked(true);
     } else {
       setChecked(false);

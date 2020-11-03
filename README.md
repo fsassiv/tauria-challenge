@@ -1,6 +1,8 @@
-## Node + Express + Typescript
+## Challenge
 
-Basic setup for Node, Express and Typescript projects
+### Technologies
+
+Node, Express, React and Typescript
 
 ### Instructions
 

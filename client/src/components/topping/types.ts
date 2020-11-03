@@ -1,4 +1,8 @@
-import { ToppingTypes } from '../../pages/toppings/types';
+export interface ToppingTypes {
+  id: string;
+  label: string;
+  imgUrl: string;
+}
 
 export interface ToppingProps {
   topping: ToppingTypes;
