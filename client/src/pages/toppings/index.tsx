@@ -18,6 +18,7 @@ const Topings = () => {
       }
     })();
   }, []);
+
   return (
     <>
       <h4 className="page__title">Choose your toppings</h4>

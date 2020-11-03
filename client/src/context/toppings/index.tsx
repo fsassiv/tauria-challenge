@@ -4,6 +4,7 @@ import { ToppingsContextComponentTypes, ToppingsContextTypes, ToppingTypes } fro
 const DEFAULT_VALUE = {
   toppingsList: [],
   updateToppingsList: () => {},
+  clearToppingsList: () => {},
 };
 
 export const ToppingsContext = createContext<ToppingsContextTypes>(DEFAULT_VALUE);
@@ -26,7 +27,9 @@ const ToppingsContextComponent = (props: ToppingsContextComponentTypes) => {
     }
   };
 
-  return <ToppingsContext.Provider value={{ toppingsList, updateToppingsList }}>{children}</ToppingsContext.Provider>;
+  const clearToppingsList = () => setToppingsList([]);
+
+  return <ToppingsContext.Provider value={{ toppingsList, updateToppingsList, clearToppingsList }}>{children}</ToppingsContext.Provider>;
 };
 
 export default ToppingsContextComponent;

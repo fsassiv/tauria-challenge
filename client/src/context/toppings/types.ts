@@ -9,6 +9,7 @@ export interface ToppingTypes {
 export interface ToppingsContextTypes {
   toppingsList: ToppingTypes[];
   updateToppingsList: (topping: ToppingTypes) => void;
+  clearToppingsList: () => void;
 }
 
 export interface ToppingsContextComponentTypes {
