@@ -6,12 +6,21 @@
   &__list {
     margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    @media screen and (min-width: 720px) {
+      flex-direction: row;
+    }
   }
 
   &__next-btn {
     position: absolute;
     right: 0;
     bottom: -60px;
+  }
+
+  &__table-wrapper {
+    max-height: '300px';
+    overflow-y: 'scroll';
   }
 }

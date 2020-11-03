@@ -25,7 +25,7 @@ const Topings = () => {
       {hasError ? (
         <Error />
       ) : (
-        <div style={{ maxHeight: '400px', overflowY: 'scroll' }}>
+        <div className="page__table-wrapper">
           <table className="u-full-width">
             <thead>
               <tr>

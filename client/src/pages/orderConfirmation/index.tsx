@@ -14,7 +14,7 @@ const OrderConfirmation = () => {
     <>
       <h4 className="page__title">Choose the size of your pizza</h4>
       <h5>Here's a resume of your order:</h5>
-      <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
+      <div className="page__table-wrapper">
         <table className="u-full-width">
           <thead>
             <tr>
