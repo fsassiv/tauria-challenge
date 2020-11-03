@@ -22,8 +22,8 @@ const Crust = () => {
     })();
   }, []);
 
-  const handleClick = (size: CrustTypes) => {
-    setCrust(size);
+  const handleClick = (crust: CrustTypes) => {
+    setCrust(crust);
     history.push('/toppings');
   };
 

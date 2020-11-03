@@ -1,6 +1,6 @@
-import { CrustContext } from '@context/crust/index';
-import { SizeContext } from '@context/size/index';
-import { ToppingsContext } from '@context/toppings/index';
+import { CrustContext } from '@context/crust';
+import { SizeContext } from '@context/size';
+import { ToppingsContext } from '@context/toppings';
 import React, { useContext, useEffect, useState } from 'react';
 
 const Header = () => {
