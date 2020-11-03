@@ -1,5 +1,6 @@
 import React from 'react';
 import CrustContextComponent from '../crust';
+import OrderContextComponent from '../order';
 import SizeContextComponent from '../size';
 import ToppingsContextComponent from '../toppings';
 import { GlobalContexttProps } from './types';
@@ -9,7 +10,9 @@ const GlobalContext = (props: GlobalContexttProps) => {
   return (
     <SizeContextComponent>
       <CrustContextComponent>
-        <ToppingsContextComponent>{children}</ToppingsContextComponent>
+        <ToppingsContextComponent>
+          <OrderContextComponent>{children}</OrderContextComponent>
+        </ToppingsContextComponent>
       </CrustContextComponent>
     </SizeContextComponent>
   );

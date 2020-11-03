@@ -1,29 +1,12 @@
-import { CrustContext } from '@context/crust';
+import { OrderContext } from '@context/order/index';
 import { SizeContext } from '@context/size';
 import { ToppingsContext } from '@context/toppings';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 const Header = () => {
-  const [total, setTotal] = useState(0);
   const { size } = useContext(SizeContext);
-  const { crust } = useContext(CrustContext);
-  const { toppingsList, clearToppingsList } = useContext(ToppingsContext);
-
-  useEffect(() => {
-    let subtotal = 0;
-    let toppingsListLenth = toppingsList.length;
-    let toppingsAmmount = 0;
-    let extraToppingPrice = 0.5;
-
-    if (size) subtotal += size.price;
-    if (crust) subtotal += crust.price;
-    if (toppingsListLenth > 3) {
-      toppingsAmmount = (toppingsListLenth - 3) * extraToppingPrice;
-      subtotal += toppingsAmmount;
-    }
-
-    setTotal(subtotal);
-  }, [size, crust, toppingsList]);
+  const { clearToppingsList } = useContext(ToppingsContext);
+  const { total } = useContext(OrderContext);
 
   useEffect(() => {
     clearToppingsList();
