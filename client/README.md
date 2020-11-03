@@ -1,1 +1,0 @@
-### A React + Typescript template
