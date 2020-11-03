@@ -8,7 +8,7 @@ Node, Express, React and Typescript
 
 - Install project dependencies: In the root folder run the following npm commands:
   - `npm install:server` or `npm i` to install server dependencies
-  - `npm install:cliente` to install client dependencies
+  - `npm install:client` to install client dependencies
 
 After installation, run the project.
 In the root folder run `npm start`, it will start both server and the client application.
