@@ -24,7 +24,7 @@ const OrderContextComponent = (props: OrderContextComponentTypes) => {
     let toppingsAmmount = 0;
     let extraToppingPrice = 0.5;
 
-    if (size) subtotal += size.price;
+    if (size) subtotal += size?.price;
     if (crust) subtotal += crust.price;
     if (toppingsListLenth > 3) {
       toppingsAmmount = (toppingsListLenth - 3) * extraToppingPrice;
