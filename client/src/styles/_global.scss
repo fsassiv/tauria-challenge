@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  text-decoration: none;
+  list-style: none;
 }
 
 html,
@@ -19,4 +21,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   backdrop-filter: blur(3px);
+}
+
+p {
+  margin: 0;
 }

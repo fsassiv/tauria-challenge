@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -16,8 +16,10 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "prettier", "@typescript-eslint"],
   "rules": {
+    "prettier/prettier": 2,
+    "react/jsx-closing-bracket-location": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
   },
   "settings": {
@@ -25,7 +27,9 @@
       "alias": {
         "map": [
           ["@components", "./src/components"],
-          ["@layout", "./src/layout"]
+          ["@layout", "./src/layout"],
+          ["@services", "./src/services"],
+          ["@context", "./src/context"]
         ],
         "extensions": [".ts", ".tsx", ".scss"]
       }

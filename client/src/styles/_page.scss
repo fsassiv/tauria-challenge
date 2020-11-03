@@ -3,4 +3,9 @@
   height: 100vh;
   padding: 30px 10px 20px;
   background-color: rgba(0, 0, 0, 0.5);
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

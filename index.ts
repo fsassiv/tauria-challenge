@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
+import crustsRoute from './routes/crust';
 import sizesRoute from './routes/sizes';
 import toppingsRoute from './routes/toppings';
 
@@ -16,9 +17,9 @@ app.use(express.static(path.join(__dirname, 'client/dist')));
 
 app.get('/', (_req: Request, res: Response) => {
   res.redirect('http://localhost:5000');
-  // res.render(path.resolve(__dirname, 'client', 'dist', 'index.html'));
 });
 
+app.use('/api/crusts', crustsRoute);
 app.use('/api/toppings', toppingsRoute);
 app.use('/api/sizes', sizesRoute);
 

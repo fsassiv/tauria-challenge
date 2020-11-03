@@ -10,7 +10,7 @@ const sizes: Size[] = [
 ];
 
 router.get('/', (_req: Request, res: Response) => {
-  res.send(sizes);
+  res.send(sizes).status(200);
 });
 
 export default router;

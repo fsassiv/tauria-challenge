@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Page from '../layout/page/Page';
 
-const NotFound = () => {
+const Error = () => {
   return (
-    <Page>
-      <h1>404</h1>
-      <h3>Sorry. Page not found</h3>
+    <>
+      <h5>Sorry, but omething went wrong.</h5>
+      <h5>Please, restart your order and try againd.</h5>
       <Link to="/" className="button button-primary">
         Go back to the Home Page
       </Link>
-    </Page>
+    </>
   );
 };
 
-export default NotFound;
+export default Error;
